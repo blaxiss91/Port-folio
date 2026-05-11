@@ -68,8 +68,8 @@ export default function App() {
                 <p className="text-xs uppercase tracking-widest font-bold">3D / Video / Motion</p>
               </div>
               <div className="space-y-2">
-                <p className="font-mono text-[8px] uppercase tracking-widest text-white/30">Artist</p>
-                <p className="text-xs uppercase tracking-widest font-bold">Autodidacte Passionné</p>
+                <p className="font-mono text-[8px] uppercase tracking-widest text-white/30">Age</p>
+                <p className="text-xs uppercase tracking-widest font-bold">17</p>
               </div>
               <div className="space-y-2">
                 <p className="font-mono text-[8px] uppercase tracking-widest text-white/30">Location</p>
