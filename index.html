@@ -108,7 +108,6 @@
         }
 
         .scattered-photo img {
-            filter: grayscale(1);
             transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
             border-radius: 1.5rem;
             width: 100%;
@@ -120,10 +119,6 @@
             transform: rotate(0deg) scale(1.1) !important;
             z-index: 50;
             box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.8);
-        }
-
-        .scattered-photo:hover img {
-            filter: grayscale(0);
         }
     </style>
 </head>
@@ -250,12 +245,12 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div class="reveal-card p-4" data-aos="flip-left">
-                    <img src="https://images.unsplash.com/photo-16331167606207-d840b5070fc2?auto=format&fit=crop&q=80&w=800" class="rounded-[1.5rem] w-full h-72 object-cover mb-6 grayscale hover:grayscale-0 transition-all duration-700">
+                    <img src="https://images.unsplash.com/photo-16331167606207-d840b5070fc2?auto=format&fit=crop&q=80&w=800" class="rounded-[1.5rem] w-full h-72 object-cover mb-6 transition-all duration-700">
                     <h3 class="text-lg font-bold mb-2 uppercase tracking-wide">Modélisation Avancée</h3>
                     <p class="text-slate-400 text-xs">Pièces techniques et rendu studio réalisés sous Blender.</p>
                 </div>
                 <div class="reveal-card p-4" data-aos="flip-right" data-aos-delay="200">
-                    <img src="https://images.unsplash.com/photo-1617791160536-598cf3278827?auto=format&fit=crop&q=80&w=800" class="rounded-[1.5rem] w-full h-72 object-cover mb-6 grayscale hover:grayscale-0 transition-all duration-700">
+                    <img src="https://images.unsplash.com/photo-1617791160536-598cf3278827?auto=format&fit=crop&q=80&w=800" class="rounded-[1.5rem] w-full h-72 object-cover mb-6 transition-all duration-700">
                     <h3 class="text-lg font-bold mb-2 uppercase tracking-wide">Hard Surface Design</h3>
                     <p class="text-slate-400 text-xs">Exploration des textures mécaniques et lumières Cycles.</p>
                 </div>
