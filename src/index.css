@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-primary: #60a5fa;
+  --color-secondary: #a78bfa;
+}
+
+@layer base {
+  body {
+    @apply bg-[#020617] text-slate-200 antialiased;
+  }
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary font-black;
+}
+
+.reveal-card {
+  @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl transition-all duration-500 hover:border-primary/50 hover:-translate-y-2 hover:bg-white/10;
+}
+
+@keyframes bounce-slow {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
+
+.scroll-indicator {
+  animation: bounce-slow 2s infinite;
+}
