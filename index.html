@@ -56,16 +56,27 @@
         .hero-img-container {
             border-radius: 2.5rem;
             overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
             transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
         }
 
         .hero-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 2.5rem;
             transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .hero-img-container:hover {
+            border-color: rgba(96, 165, 250, 0.5);
+            box-shadow: 0 0 40px rgba(96, 165, 250, 0.1);
         }
 
         .hero-img-container:hover img {
             filter: grayscale(0);
-            transform: scale(1.05);
+            transform: scale(1.1);
         }
 
         @keyframes bounce-slow {
@@ -150,8 +161,8 @@
         </div>
 
         <div class="md:col-span-4 flex flex-col items-center justify-center p-8 bg-white/[0.01]">
-            <div data-aos="zoom-in" data-aos-delay="400" class="w-full hero-img-container aspect-[3/4] border border-white/10 p-2 relative group cursor-pointer">
-                <img src="/src/assets/images/regenerated_image_1778498577560.jpg" class="w-full h-full object-cover grayscale" alt="Featured">
+            <div data-aos="zoom-in" data-aos-delay="400" class="w-full hero-img-container aspect-[3/4] relative group cursor-pointer">
+                <img src="/photos/photo_0.jpg" class="grayscale" alt="Featured Work">
             </div>
         </div>
     </section>
@@ -169,18 +180,18 @@
             <div class="flex flex-wrap justify-center items-center gap-10 py-10" id="photo-wall">
                 <script>
                     const galleryPhotos = [
-                        "/src/assets/images/regenerated_image_1778498569489.jpg",
-                        "/src/assets/images/regenerated_image_1778498571331.jpg",
-                        "/src/assets/images/regenerated_image_1778498573046.jpg",
-                        "/src/assets/images/regenerated_image_1778498575261.jpg",
-                        "https://images.unsplash.com/photo-1552168324-d612d77725e3?q=80&w=800",
-                        "https://images.unsplash.com/photo-1478720568477-152d9b164e26?q=80&w=800",
-                        "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=800",
-                        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800",
-                        "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=800",
-                        "https://images.unsplash.com/photo-1512790182412-b19e6d12bf45?q=80&w=800",
-                        "https://images.unsplash.com/photo-1533154683836-84ea7a0bc310?q=80&w=800",
-                        "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=800"
+                        "/photos/photo_0.jpg",
+                        "/photos/photo_1.jpg",
+                        "/photos/photo_2.jpg",
+                        "/photos/photo_3.jpg",
+                        "/photos/photo_4.jpg",
+                        "/photos/photo_5.jpg",
+                        "/photos/photo_6.jpg",
+                        "/photos/photo_7.jpg",
+                        "/photos/photo_8.jpg",
+                        "/photos/photo_9.jpg",
+                        "/photos/photo_10.jpg",
+                        "/photos/photo_11.jpg"
                     ];
                     
                     const photoWall = document.getElementById('photo-wall');
