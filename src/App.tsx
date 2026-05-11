@@ -189,20 +189,20 @@ export default function App() {
                 src="/photos/modelisation_0.jpg" 
                 className="rounded-2xl w-full h-72 object-cover mb-6 grayscale hover:grayscale-0 transition-all duration-700"
                 referrerPolicy="no-referrer"
-                alt="Modélisation Arduino"
+                alt="Modélisation boitier ESP32"
               />
-              <h3 className="text-lg font-bold mb-2 uppercase tracking-wide">Modélisation Arduino</h3>
-              <p className="text-slate-400 text-xs">Pièces techniques pour stabilisation vidéo réalisées sous Blender.</p>
+              <h3 className="text-lg font-bold mb-2 uppercase tracking-wide">Modélisation boitier sur mesure pour ESP32</h3>
+              <p className="text-slate-400 text-xs">Pièce conçue pour un projet Arduino de stabilisation vidéo (Gimbal) pour mon Sony A7III.</p>
             </motion.div>
             <motion.div {...reveal} transition={{ delay: 0.2 }} className="reveal-card p-4">
               <img 
                 src="/photos/modelisation_1.jpg" 
                 className="rounded-2xl w-full h-72 object-cover mb-6 grayscale hover:grayscale-0 transition-all duration-700"
                 referrerPolicy="no-referrer"
-                alt="Hard Surface Design"
+                alt="Plan de kart 3D"
               />
-              <h3 className="text-lg font-bold mb-2 uppercase tracking-wide">Hard Surface Design</h3>
-              <p className="text-slate-400 text-xs">Exploration des textures mécaniques et impression 3D.</p>
+              <h3 className="text-lg font-bold mb-2 uppercase tracking-wide">Plan de kart en 3D</h3>
+              <p className="text-slate-400 text-xs">Modélisation complète d'un châssis de karting avec intégration moteur, conçue pour l'étude technique et la fabrication.</p>
             </motion.div>
           </div>
         </div>
