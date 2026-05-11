@@ -2,16 +2,16 @@ import { motion } from "motion/react";
 import { Play, Box, Camera, Layers, Mail } from "lucide-react";
 
 const PHOTOS = [
-  { id: 0, url: "/src/assets/images/regenerated_image_1778498569489.jpg" },
-  { id: 1, url: "/src/assets/images/regenerated_image_1778498571331.jpg" },
-  { id: 2, url: "/src/assets/images/regenerated_image_1778498573046.jpg" },
-  { id: 3, url: "/src/assets/images/regenerated_image_1778498575261.jpg" },
-  { id: 4, url: "https://images.unsplash.com/photo-1552168324-d612d77725e3?auto=format&fit=crop&q=80&w=800" },
-  { id: 5, url: "https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&q=80&w=800" },
-  { id: 6, url: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=800" },
-  { id: 7, url: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=800" },
-  { id: 8, url: "https://images.unsplash.com/photo-1533154683836-84ea7a0bc310?auto=format&fit=crop&q=80&w=800" },
-  { id: 9, url: "https://images.unsplash.com/photo-1512790182412-b19e6d12bf45?auto=format&fit=crop&q=80&w=800" }
+  { id: 0, url: "/photos/photo_0.jpg" },
+  { id: 1, url: "/photos/photo_1.jpg" },
+  { id: 2, url: "/photos/photo_2.jpg" },
+  { id: 3, url: "/photos/photo_3.jpg" },
+  { id: 4, url: "/photos/photo_4.jpg" },
+  { id: 5, url: "/photos/photo_5.jpg" },
+  { id: 6, url: "/photos/photo_6.jpg" },
+  { id: 7, url: "/photos/photo_7.jpg" },
+  { id: 8, url: "/photos/photo_8.jpg" },
+  { id: 9, url: "/photos/photo_9.jpg" }
 ];
 
 export default function App() {
@@ -25,8 +25,21 @@ export default function App() {
   return (
     <div className="font-sans leading-tight">
       
+      {/* SIMPLE NAV */}
+      <nav className="fixed top-6 right-6 z-50 flex gap-4">
+        {['Photos', 'Vidéo', '3D', 'Motion'].map((item, i) => (
+          <button 
+            key={item}
+            onClick={() => document.getElementById(`section-${i + 1}`)?.scrollIntoView({ behavior: 'smooth' })}
+            className="px-4 py-2 bg-white/5 backdrop-blur-xl border border-white/10 rounded-full text-[10px] uppercase tracking-widest hover:bg-primary/20 transition-all cursor-pointer"
+          >
+            {item}
+          </button>
+        ))}
+      </nav>
+
       {/* HERO SECTION - STUDIO AESTHETIC */}
-      <section className="min-h-screen grid grid-cols-1 md:grid-cols-12 border-b border-white/[0.05]">
+      <section id="section-0" className="min-h-screen grid grid-cols-1 md:grid-cols-12 border-b border-white/[0.05]">
         {/* Left Column - Large Statement */}
         <div className="md:col-span-8 flex flex-col justify-center px-6 md:px-16 py-20 border-r border-white/[0.05] relative overflow-hidden">
           <div className="scanline absolute inset-0 pointer-events-none opacity-20" />
@@ -45,8 +58,8 @@ export default function App() {
             </div>
 
             <h1 className="text-[12vw] md:text-[10vw] font-black leading-[0.8] tracking-tighter uppercase mb-6">
-              STUDIO <br />
-              <span className="italic">WORKS.</span>
+              ALEXIS <br />
+              <span className="italic">CHARRON.</span>
             </h1>
 
             <div className="flex flex-wrap gap-x-12 gap-y-6 mt-12">
@@ -79,7 +92,7 @@ export default function App() {
             className="w-full aspect-[3/4] border border-white/10 p-2 group relative"
           >
             <img 
-              src="/src/assets/images/regenerated_image_1778498577560.jpg" 
+              src="/photos/photo_0.jpg" 
               className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0"
               alt="Featured"
             />
@@ -96,7 +109,7 @@ export default function App() {
       </section>
 
       {/* SECTION : PHOTOGRAPHIE (10 PHOTOS) - SCATTERED WALL */}
-      <section className="py-32 px-6 overflow-hidden bg-[#03081a]">
+      <section id="section-1" className="py-32 px-6 overflow-hidden bg-[#03081a]">
         <div className="max-w-7xl mx-auto">
           <motion.div {...reveal} className="mb-20 text-center">
             <h2 className="text-xl font-bold uppercase tracking-[0.3em] inline-flex items-center">
@@ -134,7 +147,7 @@ export default function App() {
       </section>
 
       {/* SECTION : RÉALISATIONS VIDÉO (2 VIDEOS) */}
-      <section className="py-32 px-6 max-w-6xl mx-auto">
+      <section id="section-2" className="py-32 px-6 max-w-6xl mx-auto">
         <motion.div {...reveal} className="mb-16">
           <h2 className="text-xl font-bold uppercase tracking-[0.3em] flex items-center">
             <span className="w-12 h-[1px] bg-primary mr-6"></span> 
@@ -143,29 +156,25 @@ export default function App() {
         </motion.div>
         
         <div className="grid grid-cols-1 gap-12">
-          <motion.div {...reveal} className="reveal-card overflow-hidden aspect-video shadow-2xl">
-            <iframe 
-              className="w-full h-full" 
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0&mute=1" 
-              title="Work 1" 
-              frameBorder="0" 
-              allowFullScreen
-            ></iframe>
+          <motion.div {...reveal} className="reveal-card overflow-hidden aspect-video shadow-2xl bg-black flex items-center justify-center">
+            <video 
+              className="w-full h-full object-cover" 
+              src="/photos/video_0.mp4" 
+              controls
+            />
           </motion.div>
-          <motion.div {...reveal} className="reveal-card overflow-hidden aspect-video shadow-2xl">
-             <iframe 
-              className="w-full h-full" 
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0&mute=1" 
-              title="Work 2" 
-              frameBorder="0" 
-              allowFullScreen
-            ></iframe>
+          <motion.div {...reveal} className="reveal-card overflow-hidden aspect-video shadow-2xl bg-black flex items-center justify-center">
+            <video 
+              className="w-full h-full object-cover" 
+              src="/photos/video_1.mp4" 
+              controls
+            />
           </motion.div>
         </div>
       </section>
 
       {/* SECTION : CONCEPTION 3D (2 PROJETS) */}
-      <section className="py-32 bg-[#03081a]">
+      <section id="section-3" className="py-32 bg-[#03081a]">
         <div className="max-w-6xl mx-auto px-6">
           <motion.div {...reveal} className="mb-16 text-right">
             <h2 className="text-xl font-bold uppercase tracking-[0.3em] flex items-center justify-end">
@@ -177,7 +186,7 @@ export default function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <motion.div {...reveal} className="reveal-card p-4">
               <img 
-                src="https://images.unsplash.com/photo-16331167606207-d840b5070fc2?auto=format&fit=crop&q=80&w=800" 
+                src="/photos/modelisation_0.jpg" 
                 className="rounded-2xl w-full h-72 object-cover mb-6 grayscale hover:grayscale-0 transition-all duration-700"
                 referrerPolicy="no-referrer"
                 alt="Modélisation Arduino"
@@ -187,7 +196,7 @@ export default function App() {
             </motion.div>
             <motion.div {...reveal} transition={{ delay: 0.2 }} className="reveal-card p-4">
               <img 
-                src="https://images.unsplash.com/photo-1617791160536-598cf3278827?auto=format&fit=crop&q=80&w=800" 
+                src="/photos/modelisation_1.jpg" 
                 className="rounded-2xl w-full h-72 object-cover mb-6 grayscale hover:grayscale-0 transition-all duration-700"
                 referrerPolicy="no-referrer"
                 alt="Hard Surface Design"
@@ -200,7 +209,7 @@ export default function App() {
       </section>
 
       {/* SECTION : ANIMATIONS (4 PROJETS) */}
-      <section className="py-32 px-6 max-w-6xl mx-auto">
+      <section id="section-4" className="py-32 px-6 max-w-6xl mx-auto">
         <motion.div {...reveal} className="mb-16">
           <h2 className="text-xl font-bold uppercase tracking-[0.3em] flex items-center">
             <span className="w-12 h-[1px] bg-primary mr-6"></span> 
@@ -214,15 +223,21 @@ export default function App() {
               key={i} 
               {...reveal} 
               transition={{ delay: i * 0.1 }}
-              className="reveal-card aspect-square relative group overflow-hidden"
+              className="reveal-card aspect-square relative group overflow-hidden bg-black"
             >
-              <img 
-                src={`https://images.unsplash.com/photo-${1550751827 + i}-4bd374c3f58b?q=80&w=400`} 
+              <video 
+                src={`/photos/animation_${i}.mp4`} 
                 className="w-full h-full object-cover opacity-50 group-hover:opacity-100 transition-opacity"
-                alt={`Animation ${i}`}
+                loop 
+                muted 
+                onMouseOver={(e) => (e.currentTarget as HTMLVideoElement).play()}
+                onMouseOut={(e) => (e.currentTarget as HTMLVideoElement).pause()}
               />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <Play size={24} className="text-white/20 group-hover:text-primary transition-colors" />
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <Play size={24} className="text-white/20 group-hover:opacity-0 transition-opacity" />
+              </div>
+              <div className="absolute bottom-2 left-4 pointer-events-none">
+                <p className="text-[8px] uppercase tracking-[0.2em] opacity-0 group-hover:opacity-100 transition-opacity">Simulation {i + 1}</p>
               </div>
             </motion.div>
           ))}
