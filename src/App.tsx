@@ -11,7 +11,9 @@ const PHOTOS = [
   { id: 6, url: "/photos/photo_6.jpg" },
   { id: 7, url: "/photos/photo_7.jpg" },
   { id: 8, url: "/photos/photo_8.jpg" },
-  { id: 9, url: "/photos/photo_9.jpg" }
+  { id: 9, url: "/photos/photo_9.jpg" },
+  { id: 10, url: "/photos/photo_10.jpg" },
+  { id: 11, url: "/photos/photo_11.jpg" }
 ];
 
 export default function App() {
@@ -235,9 +237,6 @@ export default function App() {
               />
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                 <Play size={24} className="text-white/20 group-hover:opacity-0 transition-opacity" />
-              </div>
-              <div className="absolute bottom-2 left-4 pointer-events-none">
-                <p className="text-[8px] uppercase tracking-[0.2em] opacity-0 group-hover:opacity-100 transition-opacity">Simulation {i + 1}</p>
               </div>
             </motion.div>
           ))}
