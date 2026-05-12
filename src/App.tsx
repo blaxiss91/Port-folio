@@ -158,19 +158,25 @@ export default function App() {
         </motion.div>
         
         <div className="grid grid-cols-1 gap-12">
-          <motion.div {...reveal} className="reveal-card overflow-hidden aspect-video shadow-2xl bg-black flex items-center justify-center">
-            <video 
-              className="w-full h-full object-cover" 
-              src="/photos/video_0.mp4" 
-              controls
-            />
+          <motion.div {...reveal} className="reveal-card overflow-hidden aspect-video shadow-2xl bg-black">
+            <iframe 
+              className="w-full h-full" 
+              src="https://www.youtube.com/embed/2BvcmUTDDSs" 
+              title="Work 1" 
+              frameBorder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowFullScreen
+            ></iframe>
           </motion.div>
-          <motion.div {...reveal} className="reveal-card overflow-hidden aspect-video shadow-2xl bg-black flex items-center justify-center">
-            <video 
-              className="w-full h-full object-cover" 
-              src="https://youtu.be/DXOxmisG0r4" 
-              controls
-            />
+          <motion.div {...reveal} className="reveal-card overflow-hidden aspect-video shadow-2xl bg-black">
+            <iframe 
+              className="w-full h-full" 
+              src="https://www.youtube.com/embed/DXOxmisG0r4" 
+              title="Work 2" 
+              frameBorder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowFullScreen
+            ></iframe>
           </motion.div>
         </div>
       </section>
