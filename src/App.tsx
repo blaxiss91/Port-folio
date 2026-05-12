@@ -168,7 +168,7 @@ export default function App() {
           <motion.div {...reveal} className="reveal-card overflow-hidden aspect-video shadow-2xl bg-black flex items-center justify-center">
             <video 
               className="w-full h-full object-cover" 
-              src="/photos/video_1.mp4" 
+              src="https://youtu.be/DXOxmisG0r4" 
               controls
             />
           </motion.div>
